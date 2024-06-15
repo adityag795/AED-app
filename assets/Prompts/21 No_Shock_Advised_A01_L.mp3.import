@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dskxjshaw0irx"
+path="res://.godot/imported/21 No_Shock_Advised_A01_L.mp3-53f64068354c37e50268b9eaf5247d6c.mp3str"
+
+[deps]
+
+source_file="res://assets/Prompts/21 No_Shock_Advised_A01_L.mp3"
+dest_files=["res://.godot/imported/21 No_Shock_Advised_A01_L.mp3-53f64068354c37e50268b9eaf5247d6c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

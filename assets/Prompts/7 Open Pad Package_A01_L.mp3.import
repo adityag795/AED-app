@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://hdyimorwuyie"
+path="res://.godot/imported/7 Open Pad Package_A01_L.mp3-95ef3013128e5c5c1cb04d97aab85dc5.mp3str"
+
+[deps]
+
+source_file="res://assets/Prompts/7 Open Pad Package_A01_L.mp3"
+dest_files=["res://.godot/imported/7 Open Pad Package_A01_L.mp3-95ef3013128e5c5c1cb04d97aab85dc5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

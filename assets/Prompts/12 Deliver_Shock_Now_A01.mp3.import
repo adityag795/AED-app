@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://lpra1hggv4t5"
+path="res://.godot/imported/12 Deliver_Shock_Now_A01.mp3-61372d2da77d12edbb0dfeae24ffec61.mp3str"
+
+[deps]
+
+source_file="res://assets/Prompts/12 Deliver_Shock_Now_A01.mp3"
+dest_files=["res://.godot/imported/12 Deliver_Shock_Now_A01.mp3-61372d2da77d12edbb0dfeae24ffec61.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,314 @@
+[gd_scene load_steps=22 format=3 uid="uid://cdh1sowaw2pmf"]
+
+[ext_resource type="Script" path="res://scripts/AEDface.gd" id="1_8ahkp"]
+[ext_resource type="PackedScene" uid="uid://fb20cud6m3op" path="res://scenes/screen_button.tscn" id="2_yrxx8"]
+[ext_resource type="Texture2D" uid="uid://daln3rrf1ojx3" path="res://assets/AED Screens/Power Btn Default.png" id="3_5hv1f"]
+[ext_resource type="Texture2D" uid="uid://dusaiby6h7mcg" path="res://assets/AED Screens/Pads_In.png" id="4_biy15"]
+[ext_resource type="Texture2D" uid="uid://njyixscp2up0" path="res://assets/AED Screens/Child Mode Btn Default.png" id="5_8ocsi"]
+[ext_resource type="Texture2D" uid="uid://cu25d2bqq3fl" path="res://assets/AED Screens/Shock Btn Default.png" id="6_tlktt"]
+[ext_resource type="Texture2D" uid="uid://doiqmvwqbcjrm" path="res://assets/AED Screens/Battery/battery-full-svgrepo-com.svg" id="7_lh0or"]
+[ext_resource type="Texture2D" uid="uid://v5l4v1ydyusv" path="res://assets/AED Screens/Battery/battery-medium-svgrepo-com.svg" id="8_sltp6"]
+[ext_resource type="Texture2D" uid="uid://cwko1ys1e6j2s" path="res://assets/AED Screens/Battery/battery-low-svgrepo-com.svg" id="9_2r11f"]
+[ext_resource type="Texture2D" uid="uid://b5xhlksakif6x" path="res://assets/AED Screens/Battery/battery-line-svgrepo-com.svg" id="10_mdhwk"]
+[ext_resource type="FontFile" uid="uid://ckb6v5o3v8jwx" path="res://assets/fonts/Montserrat-Regular.ttf" id="12_sliya"]
+[ext_resource type="PackedScene" uid="uid://c3ygwsxg5hjyl" path="res://scenes/module_screen.tscn" id="16_1ttl6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_514s7"]
+font = ExtResource("12_sliya")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_pmvo8"]
+font = ExtResource("12_sliya")
+font_size = 38
+
+[sub_resource type="LabelSettings" id="LabelSettings_mdr26"]
+font = ExtResource("12_sliya")
+font_size = 40
+font_color = Color(0.831373, 0.352941, 0, 1)
+
+[sub_resource type="Animation" id="Animation_17kxq"]
+resource_name = "Mod2_selected"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Selected:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(80, 260)]
+}
+
+[sub_resource type="Animation" id="Animation_y8tvt"]
+resource_name = "Mod3_selected"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Selected:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(80, 320)]
+}
+
+[sub_resource type="Animation" id="Animation_q0nek"]
+resource_name = "Mod4_selected"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Selected:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(80, 380)]
+}
+
+[sub_resource type="Animation" id="Animation_c5vid"]
+resource_name = "Mod5_selected"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Selected:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(80, 440)]
+}
+
+[sub_resource type="Animation" id="Animation_frv3t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Selected:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(80, 200)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8l0h6"]
+_data = {
+"Mod2_selected": SubResource("Animation_17kxq"),
+"Mod3_selected": SubResource("Animation_y8tvt"),
+"Mod4_selected": SubResource("Animation_q0nek"),
+"Mod5_selected": SubResource("Animation_c5vid"),
+"RESET": SubResource("Animation_frv3t")
+}
+
+[node name="AEDface" type="Node2D"]
+script = ExtResource("1_8ahkp")
+metadata/_edit_vertical_guides_ = [480.0]
+metadata/_edit_horizontal_guides_ = [270.0]
+
+[node name="Power_Btn" parent="." instance=ExtResource("2_yrxx8")]
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 180.0
+offset_bottom = 140.0
+texture_normal = ExtResource("3_5hv1f")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Pads_Btn" parent="." instance=ExtResource("2_yrxx8")]
+offset_left = 636.0
+offset_top = 40.0
+offset_right = 808.0
+offset_bottom = 140.0
+texture_normal = ExtResource("4_biy15")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ChildMode_Btn" parent="." instance=ExtResource("2_yrxx8")]
+offset_left = 888.0
+offset_top = 205.0
+offset_right = 1056.0
+offset_bottom = 373.0
+texture_normal = ExtResource("5_8ocsi")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Shock_Btn" parent="." instance=ExtResource("2_yrxx8")]
+offset_left = 878.0
+offset_top = 442.0
+offset_right = 1082.0
+offset_bottom = 646.0
+texture_normal = ExtResource("6_tlktt")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BatteryStatus" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="BatteryStatus"]
+visible = false
+offset_left = 220.0
+offset_top = 40.0
+offset_right = 596.0
+offset_bottom = 140.0
+
+[node name="ColorRect2" type="ColorRect" parent="BatteryStatus"]
+offset_left = 385.0
+offset_top = 40.0
+offset_right = 479.0
+offset_bottom = 140.0
+color = Color(1, 0.886275, 0, 1)
+
+[node name="BatteryFull" type="TextureRect" parent="BatteryStatus"]
+offset_left = 394.3
+offset_top = 55.0
+offset_right = 464.3
+offset_bottom = 125.0
+texture = ExtResource("7_lh0or")
+expand_mode = 1
+
+[node name="BatteryHalf" type="TextureRect" parent="BatteryStatus"]
+visible = false
+offset_left = 419.1
+offset_top = 55.0
+offset_right = 489.1
+offset_bottom = 125.0
+texture = ExtResource("8_sltp6")
+expand_mode = 1
+
+[node name="BatteryLow" type="TextureRect" parent="BatteryStatus"]
+visible = false
+offset_left = 326.9
+offset_top = 55.0
+offset_right = 396.9
+offset_bottom = 125.0
+texture = ExtResource("9_2r11f")
+expand_mode = 1
+
+[node name="NoCharge" type="TextureRect" parent="BatteryStatus"]
+visible = false
+offset_left = 234.7
+offset_top = 55.0
+offset_right = 304.7
+offset_bottom = 125.0
+texture = ExtResource("10_mdhwk")
+expand_mode = 1
+
+[node name="ModuleScreen" parent="." instance=ExtResource("16_1ttl6")]
+offset_left = 80.0
+offset_top = 200.0
+offset_right = 80.0
+offset_bottom = 200.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 80.0
+offset_top = 520.0
+offset_right = 808.0
+offset_bottom = 588.0
+color = Color(0.215686, 0.188235, 0.105882, 1)
+
+[node name="Selected" type="ColorRect" parent="."]
+offset_left = 80.0
+offset_top = 200.0
+offset_right = 808.0
+offset_bottom = 268.0
+color = Color(0.831373, 0.352941, 0, 1)
+
+[node name="Screen_Name" type="Label" parent="."]
+offset_left = 92.0
+offset_top = 528.0
+offset_right = 328.0
+offset_bottom = 581.0
+text = "Module List"
+label_settings = SubResource("LabelSettings_514s7")
+
+[node name="Module1" parent="." instance=ExtResource("2_yrxx8")]
+offset_left = 92.0
+offset_top = 210.0
+offset_right = 584.0
+offset_bottom = 260.0
+
+[node name="Label" type="Label" parent="Module1"]
+layout_mode = 1
+offset_right = 315.0
+offset_bottom = 50.0
+text = "1.  CPR for Adults"
+label_settings = SubResource("LabelSettings_pmvo8")
+
+[node name="Module2" parent="." instance=ExtResource("2_yrxx8")]
+offset_left = 92.0
+offset_top = 270.0
+offset_right = 584.0
+offset_bottom = 320.0
+
+[node name="Label" type="Label" parent="Module2"]
+layout_mode = 1
+offset_right = 315.0
+offset_bottom = 50.0
+text = "2. CPR for Children"
+label_settings = SubResource("LabelSettings_pmvo8")
+
+[node name="Module3" parent="." instance=ExtResource("2_yrxx8")]
+offset_left = 92.0
+offset_top = 330.0
+offset_right = 584.0
+offset_bottom = 380.0
+
+[node name="Label" type="Label" parent="Module3"]
+layout_mode = 1
+offset_right = 315.0
+offset_bottom = 50.0
+text = "3. AED for Adult-Male"
+label_settings = SubResource("LabelSettings_pmvo8")
+
+[node name="Module4" parent="." instance=ExtResource("2_yrxx8")]
+offset_left = 92.0
+offset_top = 390.0
+offset_right = 584.0
+offset_bottom = 440.0
+
+[node name="Label" type="Label" parent="Module4"]
+layout_mode = 1
+offset_right = 315.0
+offset_bottom = 50.0
+text = "4. AED for Adult-Female"
+label_settings = SubResource("LabelSettings_pmvo8")
+
+[node name="Module5" parent="." instance=ExtResource("2_yrxx8")]
+offset_left = 92.0
+offset_top = 450.0
+offset_right = 584.0
+offset_bottom = 500.0
+
+[node name="Label" type="Label" parent="Module5"]
+layout_mode = 1
+offset_right = 315.0
+offset_bottom = 50.0
+text = "5. AED for Children (0-7)"
+label_settings = SubResource("LabelSettings_pmvo8")
+
+[node name="Start_Btn" parent="." instance=ExtResource("2_yrxx8")]
+offset_left = 654.0
+offset_top = 528.0
+offset_right = 784.0
+offset_bottom = 578.0
+
+[node name="Label" type="Label" parent="Start_Btn"]
+layout_mode = 1
+offset_right = 142.0
+offset_bottom = 53.0
+text = "START"
+label_settings = SubResource("LabelSettings_mdr26")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8l0h6")
+}

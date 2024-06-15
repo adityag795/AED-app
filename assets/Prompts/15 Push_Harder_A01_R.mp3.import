@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://36qhm3pnm0yo"
+path="res://.godot/imported/15 Push_Harder_A01_R.mp3-1740955c3e0cedb46cc8bcf44dd8a8e1.mp3str"
+
+[deps]
+
+source_file="res://assets/Prompts/15 Push_Harder_A01_R.mp3"
+dest_files=["res://.godot/imported/15 Push_Harder_A01_R.mp3-1740955c3e0cedb46cc8bcf44dd8a8e1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

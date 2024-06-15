@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://q0q14eyvpjar"]
+
+[ext_resource type="Script" path="res://scripts/touch_button.gd" id="1_ntui8"]
+
+[node name="TouchButton" type="TextureButton" groups=["buttons"]]
+offset_right = 463.0
+offset_bottom = 53.0
+script = ExtResource("1_ntui8")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

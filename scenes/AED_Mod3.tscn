@@ -1,0 +1,773 @@
+[gd_scene load_steps=53 format=3 uid="uid://b4fqiue0k3sta"]
+
+[ext_resource type="Script" path="res://scripts/AEDface.gd" id="1_obcem"]
+[ext_resource type="PackedScene" uid="uid://fb20cud6m3op" path="res://scenes/screen_button.tscn" id="2_ik7ab"]
+[ext_resource type="Texture2D" uid="uid://daln3rrf1ojx3" path="res://assets/AED Screens/Power Btn Default.png" id="3_x0cxq"]
+[ext_resource type="Texture2D" uid="uid://dusaiby6h7mcg" path="res://assets/AED Screens/Pads_In.png" id="4_60rq8"]
+[ext_resource type="Texture2D" uid="uid://njyixscp2up0" path="res://assets/AED Screens/Child Mode Btn Default.png" id="5_1gv68"]
+[ext_resource type="Texture2D" uid="uid://cu25d2bqq3fl" path="res://assets/AED Screens/Shock Btn Default.png" id="6_ypyt1"]
+[ext_resource type="Texture2D" uid="uid://doiqmvwqbcjrm" path="res://assets/AED Screens/Battery/battery-full-svgrepo-com.svg" id="7_cj2dt"]
+[ext_resource type="Texture2D" uid="uid://v5l4v1ydyusv" path="res://assets/AED Screens/Battery/battery-medium-svgrepo-com.svg" id="8_6p24n"]
+[ext_resource type="Texture2D" uid="uid://cwko1ys1e6j2s" path="res://assets/AED Screens/Battery/battery-low-svgrepo-com.svg" id="9_rtgxe"]
+[ext_resource type="Texture2D" uid="uid://b5xhlksakif6x" path="res://assets/AED Screens/Battery/battery-line-svgrepo-com.svg" id="10_5cyaf"]
+[ext_resource type="PackedScene" uid="uid://c3ygwsxg5hjyl" path="res://scenes/module_screen.tscn" id="11_22ril"]
+[ext_resource type="Texture2D" uid="uid://bb4bd1ta2hs2l" path="res://assets/AED4AdultMale/One.png" id="12_cnm3u"]
+[ext_resource type="FontFile" uid="uid://ckb6v5o3v8jwx" path="res://assets/fonts/Montserrat-Regular.ttf" id="12_udm1l"]
+[ext_resource type="Texture2D" uid="uid://b2y5ruf3d08f3" path="res://assets/ui/back-square-svgrepo-com.svg" id="13_wthgd"]
+[ext_resource type="Texture2D" uid="uid://cq5nvc0k4h82g" path="res://assets/AED4AdultMale/Two.png" id="15_qlcbl"]
+[ext_resource type="Texture2D" uid="uid://cn2k1nb7ywqd5" path="res://assets/AED4AdultMale/Three.png" id="16_nqb02"]
+[ext_resource type="AudioStream" uid="uid://bi46whs62ixqe" path="res://assets/Prompts/2 Call for help.mp3" id="17_dus8t"]
+[ext_resource type="Texture2D" uid="uid://dvt6odprh2shc" path="res://assets/AED4AdultMale/Four.png" id="17_pj2cr"]
+[ext_resource type="Texture2D" uid="uid://dyvc74srtvhnh" path="res://assets/AED4AdultMale/Five.png" id="18_ax1ca"]
+[ext_resource type="AudioStream" uid="uid://dsm21hk2arx8d" path="res://assets/Prompts/3 Expose Bare Chest.mp3" id="18_ue4hs"]
+[ext_resource type="AudioStream" uid="uid://bijmklibik77u" path="res://assets/Prompts/4 Dry the chest area.mp3" id="19_0grbt"]
+[ext_resource type="Texture2D" uid="uid://bbmpob0yun1fa" path="res://assets/AED4AdultMale/Six.png" id="19_fexmk"]
+[ext_resource type="Texture2D" uid="uid://ddx2dg1gs3rbx" path="res://assets/AED4AdultMale/Seven.png" id="20_1jsvt"]
+[ext_resource type="AudioStream" uid="uid://dba5x03sj76bj" path="res://assets/Prompts/5 Turn on the AED.mp3" id="20_rtfbc"]
+[ext_resource type="Texture2D" uid="uid://d2twyn7qrqehb" path="res://assets/AED4AdultMale/Eight.png" id="21_agomw"]
+[ext_resource type="Texture2D" uid="uid://d18c3ntpjed4w" path="res://assets/AED4AdultMale/Nine.png" id="22_jr3f8"]
+[ext_resource type="Texture2D" uid="uid://c38fa2rlm3ccj" path="res://assets/AED4AdultMale/Ten.png" id="23_jsxgy"]
+[ext_resource type="Texture2D" uid="uid://dc3f1782h55k7" path="res://assets/AED4AdultMale/Eleven.png" id="24_hl1pt"]
+[ext_resource type="Texture2D" uid="uid://d1xknvf861wqh" path="res://assets/AED4AdultMale/Twelve.png" id="25_3ddyc"]
+[ext_resource type="Texture2D" uid="uid://bq27k6puymshj" path="res://assets/AED4AdultMale/Thirteen.png" id="26_gah4c"]
+[ext_resource type="Texture2D" uid="uid://dg6djcrnq0j4m" path="res://assets/AED4AdultMale/Fourteen.png" id="27_78f71"]
+[ext_resource type="Texture2D" uid="uid://bfi3qsgicajxn" path="res://assets/AED4AdultMale/Fifteen.png" id="28_8up2u"]
+[ext_resource type="Texture2D" uid="uid://e7y551dtgp66" path="res://assets/AED4AdultMale/Sixteen.png" id="29_myr2l"]
+[ext_resource type="Texture2D" uid="uid://cumkjtr1ajbly" path="res://assets/AED4AdultMale/Seventeen.png" id="30_f7e5e"]
+[ext_resource type="AudioStream" uid="uid://2311hn7jaupr" path="res://assets/Prompts/1 Unit_OK.mp3" id="35_hm0cu"]
+[ext_resource type="AudioStream" uid="uid://biv3jvkqty0h5" path="res://assets/Prompts/6 Remove Pad Package_A01_L.mp3" id="36_ggbyy"]
+[ext_resource type="AudioStream" uid="uid://hdyimorwuyie" path="res://assets/Prompts/7 Open Pad Package_A01_L.mp3" id="37_ygg8w"]
+[ext_resource type="AudioStream" uid="uid://fu4y22tex6dx" path="res://assets/Prompts/8 Attach_Pads_to_Chest_A01_L.mp3" id="38_uknxx"]
+[ext_resource type="AudioStream" uid="uid://btwcg687nwawb" path="res://assets/Prompts/9 Analyzing_Heart_Rhythym_A01.mp3" id="39_8k6im"]
+[ext_resource type="AudioStream" uid="uid://wv7g84xig84f" path="res://assets/Prompts/10 Stay_Clear_of_Patient_A02.mp3" id="40_rnjjv"]
+[ext_resource type="AudioStream" uid="uid://cru37d2fycfkg" path="res://assets/Prompts/11 Shock_Advised_A01.mp3" id="41_psud1"]
+[ext_resource type="AudioStream" uid="uid://b5pixg1ljgq4p" path="res://assets/Prompts/11 Charging_A01.mp3" id="42_4mccl"]
+[ext_resource type="AudioStream" uid="uid://lpra1hggv4t5" path="res://assets/Prompts/12 Deliver_Shock_Now_A01.mp3" id="43_7csgv"]
+[ext_resource type="AudioStream" uid="uid://d4dqmgb87kbwf" path="res://assets/Prompts/13 Shock_Delivered_A01.mp3" id="44_rc8ot"]
+[ext_resource type="AudioStream" uid="uid://df1pct1pf0xe5" path="res://assets/Prompts/14 Begin_CPR_A01.mp3" id="45_tjuxv"]
+[ext_resource type="AudioStream" uid="uid://36qhm3pnm0yo" path="res://assets/Prompts/15 Push_Harder_A01_R.mp3" id="46_vpud8"]
+[ext_resource type="AudioStream" uid="uid://cixbx5543ogrd" path="res://assets/Prompts/16 Good_Compressions_A01_R.mp3" id="47_0ihew"]
+[ext_resource type="AudioStream" uid="uid://dskxjshaw0irx" path="res://assets/Prompts/21 No_Shock_Advised_A01_L.mp3" id="48_duo0u"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_514s7"]
+font = ExtResource("12_udm1l")
+font_size = 40
+
+[sub_resource type="Animation" id="Animation_b08ev"]
+resource_name = "GuidedTour"
+length = 220.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GuideScreen:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10.1, 20, 30, 40, 50, 60, 70, 90, 92, 96, 98, 102, 106, 110, 122, 124, 128, 135, 144, 146, 150, 152, 156),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("12_cnm3u"), ExtResource("15_qlcbl"), ExtResource("16_nqb02"), ExtResource("17_pj2cr"), ExtResource("18_ax1ca"), ExtResource("19_fexmk"), ExtResource("20_1jsvt"), ExtResource("21_agomw"), ExtResource("22_jr3f8"), ExtResource("23_jsxgy"), ExtResource("22_jr3f8"), ExtResource("23_jsxgy"), ExtResource("24_hl1pt"), ExtResource("23_jsxgy"), ExtResource("25_3ddyc"), ExtResource("26_gah4c"), ExtResource("27_78f71"), ExtResource("28_8up2u"), ExtResource("29_myr2l"), ExtResource("22_jr3f8"), ExtResource("23_jsxgy"), ExtResource("22_jr3f8"), ExtResource("23_jsxgy"), ExtResource("30_f7e5e")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Track 1 Player 1:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Track 1 Player 2:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(4.54307),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Track 2 Player 1:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(10.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Track 2 Player 2:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(15),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Track 3 Player 1:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(20),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Track 3 Player 2:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(25),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Track 4 Player 1:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(30),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Track 4 Player 2:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(35),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Track 5 Player 1:playing")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(40),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Track 5 Player 2:playing")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(45),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Track 6 Player 1:playing")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(50),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Track 6 Player 2:playing")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(55),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Track 7 Player 1:playing")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(60),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Track 7 Player 2:playing")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(65),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Track 8 Player 1:playing")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(70),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Track 8 Player 2:playing")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(75),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Track 9 Player 1:playing")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(90, 144, 150),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, true]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Track 10 Player 1:playing")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(92, 106, 146, 152),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, true, true, true]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Track 9 Player 2:playing")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(96),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Track 10 Player 2:playing")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(98),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Track 11_1 Player 1:playing")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(102),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Track 11_2 Player 1:playing")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(104),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Track 12 Player 1:playing")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(109.9, 116),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Track 13 Player 1:playing")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(122),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Track 14 Player 1:playing")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(124),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Track 15 Player 1:playing")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(128, 130, 132),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, true]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Track 16:playing")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(135, 138),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Track 17:playing")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(156, 160),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+
+[sub_resource type="Animation" id="Animation_4apff"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GuideScreen:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("12_cnm3u")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Track 1 Player 2:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Track 10 Player 1:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Track 12 Player 1:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Track 15 Player 1:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Track 16:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Track 9 Player 1:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Track 17:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vm2kx"]
+_data = {
+"GuidedTour": SubResource("Animation_b08ev"),
+"RESET": SubResource("Animation_4apff")
+}
+
+[node name="AEDface" type="Node2D"]
+script = ExtResource("1_obcem")
+metadata/_edit_vertical_guides_ = [480.0]
+metadata/_edit_horizontal_guides_ = [270.0]
+
+[node name="Power_Btn" parent="." instance=ExtResource("2_ik7ab")]
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 180.0
+offset_bottom = 140.0
+texture_normal = ExtResource("3_x0cxq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Pads_Btn" parent="." instance=ExtResource("2_ik7ab")]
+offset_left = 636.0
+offset_top = 40.0
+offset_right = 808.0
+offset_bottom = 140.0
+texture_normal = ExtResource("4_60rq8")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ChildMode_Btn" parent="." instance=ExtResource("2_ik7ab")]
+offset_left = 888.0
+offset_top = 205.0
+offset_right = 1056.0
+offset_bottom = 373.0
+texture_normal = ExtResource("5_1gv68")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Shock_Btn" parent="." instance=ExtResource("2_ik7ab")]
+offset_left = 883.0
+offset_top = 439.0
+offset_right = 1087.0
+offset_bottom = 643.0
+texture_normal = ExtResource("6_ypyt1")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BatteryStatus" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="BatteryStatus"]
+visible = false
+offset_left = 220.0
+offset_top = 40.0
+offset_right = 596.0
+offset_bottom = 140.0
+
+[node name="ColorRect2" type="ColorRect" parent="BatteryStatus"]
+offset_left = 384.0
+offset_top = 40.0
+offset_right = 478.0
+offset_bottom = 140.0
+color = Color(1, 0.886275, 0, 1)
+
+[node name="BatteryFull" type="TextureRect" parent="BatteryStatus"]
+offset_left = 393.3
+offset_top = 55.0
+offset_right = 463.3
+offset_bottom = 125.0
+texture = ExtResource("7_cj2dt")
+expand_mode = 1
+
+[node name="BatteryHalf" type="TextureRect" parent="BatteryStatus"]
+visible = false
+offset_left = 419.1
+offset_top = 55.0
+offset_right = 489.1
+offset_bottom = 125.0
+texture = ExtResource("8_6p24n")
+expand_mode = 1
+
+[node name="BatteryLow" type="TextureRect" parent="BatteryStatus"]
+visible = false
+offset_left = 326.9
+offset_top = 55.0
+offset_right = 396.9
+offset_bottom = 125.0
+texture = ExtResource("9_rtgxe")
+expand_mode = 1
+
+[node name="NoCharge" type="TextureRect" parent="BatteryStatus"]
+visible = false
+offset_left = 234.7
+offset_top = 55.0
+offset_right = 304.7
+offset_bottom = 125.0
+texture = ExtResource("10_5cyaf")
+expand_mode = 1
+
+[node name="ModuleScreen" parent="." instance=ExtResource("11_22ril")]
+offset_left = 80.0
+offset_top = 200.0
+offset_right = 80.0
+offset_bottom = 200.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 80.0
+offset_top = 520.0
+offset_right = 808.0
+offset_bottom = 588.0
+color = Color(0.215686, 0.188235, 0.105882, 1)
+
+[node name="GuideScreen" type="TextureRect" parent="."]
+offset_left = 80.0
+offset_top = 200.0
+offset_right = 120.0
+offset_bottom = 240.0
+texture = ExtResource("12_cnm3u")
+
+[node name="GuideArea" type="ColorRect" parent="."]
+visible = false
+offset_left = 80.0
+offset_top = 200.0
+offset_right = 808.0
+offset_bottom = 520.0
+color = Color(1, 0, 0.929412, 1)
+
+[node name="Screen_Name" type="Label" parent="."]
+offset_left = 160.0
+offset_top = 528.0
+offset_right = 599.0
+offset_bottom = 581.0
+text = "3. AED for Adult-Male"
+label_settings = SubResource("LabelSettings_514s7")
+
+[node name="Exit_Btn" parent="." instance=ExtResource("2_ik7ab")]
+offset_left = 100.0
+offset_top = 534.0
+offset_right = 140.0
+offset_bottom = 574.0
+texture_normal = ExtResource("13_wthgd")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "GuidedTour"
+libraries = {
+"": SubResource("AnimationLibrary_vm2kx")
+}
+
+[node name="Track 1 Player 1" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(80, 200)
+stream = ExtResource("17_dus8t")
+volume_db = 8.0
+
+[node name="Track 1 Player 2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("17_dus8t")
+volume_db = 8.0
+
+[node name="Track 2 Player 1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("18_ue4hs")
+volume_db = 8.0
+
+[node name="Track 2 Player 2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("18_ue4hs")
+volume_db = 8.0
+
+[node name="Track 3 Player 1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_0grbt")
+volume_db = 8.0
+
+[node name="Track 3 Player 2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_0grbt")
+volume_db = 8.0
+
+[node name="Track 4 Player 2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("20_rtfbc")
+volume_db = 8.0
+
+[node name="Track 4 Player 1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("20_rtfbc")
+volume_db = 8.0
+
+[node name="Track 5 Player 1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("35_hm0cu")
+volume_db = 24.0
+
+[node name="Track 5 Player 2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("35_hm0cu")
+volume_db = 24.0
+
+[node name="Track 6 Player 1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("36_ggbyy")
+volume_db = 24.0
+
+[node name="Track 6 Player 2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("36_ggbyy")
+volume_db = 24.0
+
+[node name="Track 7 Player 1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("37_ygg8w")
+volume_db = 24.0
+
+[node name="Track 7 Player 2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("37_ygg8w")
+volume_db = 24.0
+
+[node name="Track 8 Player 1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("38_uknxx")
+volume_db = 24.0
+
+[node name="Track 8 Player 2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("38_uknxx")
+volume_db = 24.0
+
+[node name="Track 9 Player 1" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(80, 200)
+stream = ExtResource("39_8k6im")
+volume_db = 16.0
+
+[node name="Track 9 Player 2" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(80, 200)
+stream = ExtResource("39_8k6im")
+volume_db = 16.0
+
+[node name="Track 10 Player 1" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(80, 200)
+stream = ExtResource("40_rnjjv")
+volume_db = 16.0
+
+[node name="Track 10 Player 2" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(80, 200)
+stream = ExtResource("40_rnjjv")
+volume_db = 16.0
+
+[node name="Track 11_1 Player 1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("41_psud1")
+volume_db = 24.0
+
+[node name="Track 11_2 Player 1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("42_4mccl")
+volume_db = 24.0
+
+[node name="Track 12 Player 1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("43_7csgv")
+volume_db = 24.0
+
+[node name="Track 13 Player 1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("44_rc8ot")
+volume_db = 24.0
+
+[node name="Track 14 Player 1" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(80, 200)
+stream = ExtResource("45_tjuxv")
+volume_db = 24.0
+
+[node name="Track 15 Player 1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("46_vpud8")
+volume_db = 24.0
+
+[node name="Track 16" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("47_0ihew")
+volume_db = 24.0
+
+[node name="Track 17" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(80, 200)
+stream = ExtResource("48_duo0u")
+volume_db = 24.0

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dba5x03sj76bj"
+path="res://.godot/imported/5 Turn on the AED.mp3-dbc97e0798653238c857d9b1dcb33022.mp3str"
+
+[deps]
+
+source_file="res://assets/Prompts/5 Turn on the AED.mp3"
+dest_files=["res://.godot/imported/5 Turn on the AED.mp3-dbc97e0798653238c857d9b1dcb33022.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

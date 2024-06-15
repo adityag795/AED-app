@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cru37d2fycfkg"
+path="res://.godot/imported/11 Shock_Advised_A01.mp3-afdd8a379375e19069712d9e59e3f5b6.mp3str"
+
+[deps]
+
+source_file="res://assets/Prompts/11 Shock_Advised_A01.mp3"
+dest_files=["res://.godot/imported/11 Shock_Advised_A01.mp3-afdd8a379375e19069712d9e59e3f5b6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

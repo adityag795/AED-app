@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d4bg5qq17bim"
+path="res://.godot/imported/17 Stop CPR.mp3-2834dc38202f601eb370fec2478c3e67.mp3str"
+
+[deps]
+
+source_file="res://assets/Prompts/17 Stop CPR.mp3"
+dest_files=["res://.godot/imported/17 Stop CPR.mp3-2834dc38202f601eb370fec2478c3e67.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

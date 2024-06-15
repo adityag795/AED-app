@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbsppvj0ocfx5"]
+
+[ext_resource type="Script" path="res://scripts/base_screen.gd" id="1_mv3ah"]
+[ext_resource type="Texture2D" uid="uid://blj4o8oso1hey" path="res://assets/AED Screens/1_UNIT_OK.png" id="2_0q0g2"]
+
+[node name="StartScreen" type="Control"]
+layout_mode = 3
+anchor_left = 0.344
+anchor_top = 0.278
+anchor_right = 0.656
+anchor_bottom = 0.648
+offset_left = 149.76
+offset_top = 119.88
+offset_right = -149.76
+offset_bottom = -79.92
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_mv3ah")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Instruction" type="Sprite2D" parent="Control"]
+texture = ExtResource("2_0q0g2")

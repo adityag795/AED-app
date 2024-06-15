@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://df1pct1pf0xe5"
+path="res://.godot/imported/14 Begin_CPR_A01.mp3-48332b43fc9dcb0fca9721169bc054aa.mp3str"
+
+[deps]
+
+source_file="res://assets/Prompts/14 Begin_CPR_A01.mp3"
+dest_files=["res://.godot/imported/14 Begin_CPR_A01.mp3-48332b43fc9dcb0fca9721169bc054aa.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://fu4y22tex6dx"
+path="res://.godot/imported/8 Attach_Pads_to_Chest_A01_L.mp3-ef09afd74f84b101a002d351d4e42012.mp3str"
+
+[deps]
+
+source_file="res://assets/Prompts/8 Attach_Pads_to_Chest_A01_L.mp3"
+dest_files=["res://.godot/imported/8 Attach_Pads_to_Chest_A01_L.mp3-ef09afd74f84b101a002d351d4e42012.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
